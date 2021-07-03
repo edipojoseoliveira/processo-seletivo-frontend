@@ -11,9 +11,9 @@ import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 
-import { StatusServicoService } from './statusservico.service';
+import { StatusServicoService } from './service/statusservico.service';
 
-import { StatusServicoPipe } from './statusservico.pipe';
+import { StatusServicoPipe } from './pipe/statusservico.pipe';
 
 @NgModule({
   declarations: [

@@ -4,7 +4,7 @@ import { of } from 'rxjs/observable/of';
 import { HttpClient } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { StatusServico } from './statusservico';
+import { StatusServico } from '../model/statusservico';
 
 @Injectable()
 export class StatusServicoService {

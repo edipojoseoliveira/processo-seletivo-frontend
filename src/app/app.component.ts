@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { StatusServico } from './statusservico';
-import { StatusServicoService } from './statusservico.service';
+import { StatusServico } from './model/statusservico';
+import { StatusServicoService } from './service/statusservico.service';
 
 @Component({
   selector: 'app-root',
