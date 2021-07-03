@@ -1,0 +1,48 @@
+<div class="p-fluid p-formgrid p-grid">
+  <div class="p-col-12">
+    <h2>Estado com mais indisponibilidade: {{maisIndisponivel.estado}}</h2>
+  </div>
+
+  <div class="p-field p-col-5">
+    <label for="estado">Estado</label>
+    <input id="estado" type="text" pInputText [(ngModel)]="estado">
+  </div>
+
+  <div class="p-field p-col-5">
+    <label for="data">Data</label>
+    <p-calendar inputId="data" [(ngModel)]="data"></p-calendar>
+  </div>
+
+  <div class="p-field p-col-2">
+    <button pButton type="button" label="Filtrar" (click)="filtrar()" class="botao-filtrar"></button>
+  </div>
+
+  <div class="p-col-12">
+    <p-table [value]="listaStatusServicos" class="tabela-status">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Estado</th>
+              <th>Autorização</th>
+              <th>Retorno Autorização</th>
+              <th>Inutilização</th>
+              <th>Consulta Protocolo</th>
+              <th>Status Serviço</th>
+              <th>Consulta Cadastro</th>
+              <th>Recepção Evento</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-status>
+          <tr>
+              <td>{{status.estado}}</td>
+              <td><i class="pi {{status.statusAutorizacao | statusServicoPipe}}"></i></td>
+              <td><i class="pi {{status.statusRetornoAutorizacao | statusServicoPipe}}"></i></td>
+              <td><i class="pi {{status.statusInutilizacao | statusServicoPipe}}"></i></td>
+              <td><i class="pi {{status.statusConsultaProtocolo | statusServicoPipe}}"></i></td>
+              <td><i class="pi {{status.statusServico | statusServicoPipe}}"></i></td>
+              <td><i class="pi {{status.statusConsultaCadastro | statusServicoPipe}}"></i></td>
+              <td><i class="pi {{status.statusRecepcaoEvento | statusServicoPipe}}"></i></td>
+          </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
